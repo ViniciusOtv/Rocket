@@ -1,0 +1,14 @@
+C:\Users\vinicius.silva\source\repos\Rocket\bin\Debug\netcoreapp2.1\Rocket.deps.json
+C:\Users\vinicius.silva\source\repos\Rocket\bin\Debug\netcoreapp2.1\Rocket.runtimeconfig.json
+C:\Users\vinicius.silva\source\repos\Rocket\bin\Debug\netcoreapp2.1\Rocket.runtimeconfig.dev.json
+C:\Users\vinicius.silva\source\repos\Rocket\bin\Debug\netcoreapp2.1\Rocket.dll
+C:\Users\vinicius.silva\source\repos\Rocket\bin\Debug\netcoreapp2.1\Rocket.pdb
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.csprojAssemblyReference.cache
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.csproj.CoreCompileInputs.cache
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.RazorAssemblyInfo.cache
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.RazorAssemblyInfo.cs
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.AssemblyInfoInputs.cache
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.AssemblyInfo.cs
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.RazorTargetAssemblyInfo.cache
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.dll
+C:\Users\vinicius.silva\source\repos\Rocket\obj\Debug\netcoreapp2.1\Rocket.pdb
