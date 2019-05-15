@@ -22,7 +22,7 @@ namespace Rocket.Contracts.User
         [Required(ErrorMessageResourceName = "CampoObrigatorio")]
         [DocumentValidation(ErrorMessageResourceName = "Valor inválido")]
         [Display(Name = "Cpf")]
-        [StringLength(14, ErrorMessageResourceName = "TamanhoInvalido", MinimumLength = 11)]
+        [StringLength(14, ErrorMessageResourceName = "Tamanho Invalido", MinimumLength = 11)]
         public string Document { get; set; }
 
         public string Name { get; set; }
