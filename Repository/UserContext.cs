@@ -1,16 +1,14 @@
+using System.Data;
+using Microsoft.AspNetCore.Connections;
 using Microsoft.EntityFrameworkCore;
 using Rocket.Models;
 
 namespace Rocket.Repository
 {
-    public class UserContext : DbContext
+    public class UserContext : ConnectionContext
     {
-
-        public UserContext(DbContextOptions<UserContext> options) : base(options)
+        public UserContext(IDbConnection dbConnection) : base(dbConnection)
         {
-        }
-        public DbSet<User> Users { get; set; }
-
-        public DbSet<UserAdress> UserAdress {get; set;}
+        }        
     }
 }

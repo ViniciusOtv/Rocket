@@ -5,8 +5,6 @@ using Rocket.Repository;
 using System.ComponentModel.DataAnnotations;
 using Rocket.Attributes;
 
-
-
 namespace Rocket.Contracts.User
 {
     public class GetUserRequest

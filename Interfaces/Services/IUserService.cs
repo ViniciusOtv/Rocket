@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using Rocket.Contracts.User;
 using Rocket.Report.Results;
 
+
 namespace Rocket.Interface.Services
 {
-    public interface IUsuarioService
+    public interface IUserService
     {
-        Task<MethodResult> GetUserById(GetUserRequest request);
+        Task<MethodResult> GetUserById(GetUserByIdRequest request);
     }
 }

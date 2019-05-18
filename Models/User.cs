@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Rocket.Repository;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Rocket.Models
 {
     public class User
