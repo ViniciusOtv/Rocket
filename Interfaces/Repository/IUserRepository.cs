@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Rocket.Models;
 using Rocket.Repository;
+using System.Linq;
 
 namespace PortalParceiros.Application.Interfaces.Repositories
 {

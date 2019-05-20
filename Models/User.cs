@@ -28,34 +28,5 @@ namespace Rocket.Models
         public int Account_Status { get; set; }
 
         public DateTime  Date_Creation {get; set;}
-
-
-        public bool IsExisting(User payload, UserContext context)
-        {
-            var validateUser = context.Users.FirstOrDefault(x => x.Document == payload.Document);
-
-            if (validateUser != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public bool SaveUser(User payload, UserContext context)
-        {
-            try
-            {
-                payload.Date_Creation = DateTime.Now;
-                context.Users.Add(payload);
-                context.SaveChanges();
-            }
-            catch (System.Exception)
-            {
-                throw;
-            }
-
-            return true;
-        }
     }
 }

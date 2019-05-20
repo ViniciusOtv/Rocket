@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Threading.Tasks;
 using Rocket.Report.Results;
 
 namespace Rocket.Report.Services
@@ -49,6 +50,11 @@ namespace Rocket.Report.Services
         protected MethodResult BadRequest(IEnumerable<ValidationError> errorList)
         {
             return new BadRequestResult(errorList);
+        }
+
+        protected NotFoundResult NotFound()
+        {
+            return new NotFoundResult();
         }
     }
 }

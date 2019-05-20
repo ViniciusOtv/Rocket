@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Rocket.Repository;
 using Rocket.Models;
-
+using Rocket.Interface.Services;
+using Rocket.Contracts.User;
+using Rocket.Services;
 
 namespace Rocket.Controllers
 {
@@ -15,80 +17,24 @@ namespace Rocket.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserContext _context;
-
-        public UserController(UserContext context)
+        private readonly IUserService _userService;
+        
+        public UserController(UserContext context, IUserService userService)
         {
+            _userService = userService;
             _context = context;
         }
 
-        // GET api/values
         [HttpGet]
-        public IActionResult GetAllUsers()
+        public IActionResult GetAll()
         {
             return Ok(_context.Users.ToList());
         }
 
-        // GET api/values/5
-
-        [HttpGet("{id}", Name = "createdNumber")]
-        public ActionResult<string> GetUserById(int id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get([FromRoute] GetUserByIdRequest request)
         {
-            try
-            {
-                var payload = _context.Users.FirstOrDefault(x => x.UserId == id);
-                if (payload == null)
-                {
-                    return BadRequest("NotFound");
-                }
-                else
-                {
-                    return Ok(payload);
-                }
-            }
-            catch (System.Exception)
-            {
-                throw;
-            }
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public IActionResult UPdateDataUser(int id, User payload)
-        {
-            var putUser = _context.Users.Find(id);
-
-            if (putUser == null)
-            {
-                return NotFound();
-            }
-
-            putUser.Name = payload.Name;
-
-            putUser.CodeArea = payload.CodeArea;
-
-            putUser.CellPhone = payload.CellPhone;
-
-            putUser.PhoneNumber = payload.PhoneNumber;
-
-            _context.Users.Update(putUser);
-            _context.SaveChanges();
-            return NoContent();
-
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public IActionResult DeleteUser(int id)
-        {
-            var delUser = _context.Users.Find(id);
-
-            if (delUser == null)
-            {
-                return NotFound();
-            }
-
-            _context.Users.Remove(delUser);
-            _context.SaveChanges();
+            var response = await _userService.GetUserById(request);
             return Ok();
         }
     }
