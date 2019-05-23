@@ -11,7 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Rocket.Interface.Services;
 using Rocket.Repository;
+using Rocket.Services;
 
 namespace Rocket
 {
@@ -28,10 +30,11 @@ namespace Rocket
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+        
             services.AddDbContext<UserContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("Rocket_Dev"))
             );
+
             services.AddMvc();
         }
 

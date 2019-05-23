@@ -14,20 +14,13 @@ namespace Rocket.Repository
     public class UserRepository : IUserRepository
     {
         private IConfiguration _config;
-
-        public UserRepository(UserContext options)
-            : base()
-        {
-        }
-        public DbSet<User> Users { get; set; }
-
         public Task<User> GetUserById(int id)
         {
             using (SqlConnection connection = new SqlConnection(
                 _config.GetConnectionString("Rocket_Dev")))
             {
                 return connection.QueryFirstOrDefaultAsync<User>(
-                    "SELECT * FROM USERS WHERE = @id", new { id });
+                    "SELECT * FROM USERS (NOLOCK) WHERE = @id", new { id });
             }
         }
     }

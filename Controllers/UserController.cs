@@ -19,10 +19,9 @@ namespace Rocket.Controllers
         private readonly UserContext _context;
         private readonly IUserService _userService;
         
-        public UserController(UserContext context, IUserService userService)
+        public UserController(UserContext userContext)
         {
-            _userService = userService;
-            _context = context;
+            _context = userContext; 
         }
 
         [HttpGet]
