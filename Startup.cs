@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 using Rocket.Interface.Services;
 using Rocket.Repository;
 using Rocket.Services;
+using RocketConfiguration;
 
 namespace Rocket
 {
@@ -30,6 +31,8 @@ namespace Rocket
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.ServiceConfig();
+            
         
             services.AddDbContext<UserContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("Rocket_Dev"))

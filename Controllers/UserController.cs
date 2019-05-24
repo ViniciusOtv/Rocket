@@ -9,19 +9,26 @@ using Rocket.Models;
 using Rocket.Interface.Services;
 using Rocket.Contracts.User;
 using Rocket.Services;
+using Rocket.Report.Results;
 
 namespace Rocket.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly UserContext _context;
-        private readonly IUserService _userService;
+        private IUserService _userService;
         
-        public UserController(UserContext userContext)
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name ="userService"></param>
+        public UserController(UserContext userContext, IUserService userService)
         {
             _context = userContext; 
+            _userService = userService;
         }
 
         [HttpGet]
@@ -36,5 +43,6 @@ namespace Rocket.Controllers
             var response = await _userService.GetUserById(request);
             return Ok();
         }
+
     }
 }

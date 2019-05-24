@@ -3,7 +3,7 @@ using Rocket.Models;
 using Rocket.Repository;
 using System.Linq;
 
-namespace PortalParceiros.Application.Interfaces.Repositories
+namespace Rocket.Interface.Repositories
 {
     public interface IUserRepository 
     {

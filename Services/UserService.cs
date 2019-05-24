@@ -8,7 +8,7 @@ using Rocket.Interface.Services;
 using Rocket.Contracts;
 using Rocket.Repository;
 using Microsoft.Extensions.Configuration;
-using PortalParceiros.Application.Interfaces.Repositories;
+using Rocket.Interface.Repositories;
 using Rocket.Report.Results;
 
 

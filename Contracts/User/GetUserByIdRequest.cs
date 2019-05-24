@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Rocket.Repository;
 using System.ComponentModel.DataAnnotations;
 using Rocket.Attributes;
+using System.Resources;
 
 namespace Rocket.Contracts.User
 {
@@ -13,8 +14,7 @@ namespace Rocket.Contracts.User
         ///Identificador do usuário
         ///</summary>
 
-        [Range(1, int.MaxValue, ErrorMessageResourceName = "ValorInvalido")]
-        [Required(ErrorMessageResourceName = "Required field")]
+        // [Required(ErrorMessageResourceType = typeof(), ErrorMessageResourceName = "Required field")]
         public int UserId { get; set; }
 
     }

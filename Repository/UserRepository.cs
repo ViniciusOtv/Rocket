@@ -5,7 +5,7 @@ using Dapper;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Rocket.Interface.Services;
-using PortalParceiros.Application.Interfaces.Repositories;
+using Rocket.Interface.Repositories;
 using Rocket.Report.Results;
 using Rocket.Report.Services;
 
