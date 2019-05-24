@@ -23,7 +23,7 @@ namespace Rocket.Services
         {
             _usuarioRepository = user;
         }
-
+ 
         private readonly IUserRepository _usuarioRepository;
         public async Task<MethodResult> GetUserById(GetUserByIdRequest request)
         {
